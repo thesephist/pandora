@@ -1,0 +1,141 @@
+// resets
+html, body, div, iframe, p{margin:0;padding:0}h1, h2, h3{font-weight:normal}img{border:0}body{-webkit-font-smoothing:antialiased;font-size:1.3em;font-family:"Quicksand", sans-serif;font-weight:700;}
+
+::selection {
+    background-color:rgba(255,255,255,0.3);
+}
+
+#pandora {
+    width:100vw;
+    min-height:100vh;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:black;
+    color:white;
+    overflow:hidden;
+}
+
+#pandora .progress {
+    display:block;
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:50vw;
+    height:10px;
+    background-color:white;
+    transition:width 0.3s;
+}
+
+#question {
+    text-align:center;
+    min-width:50vw;
+    max-width:85vw;
+    margin:15vh auto;
+    font-size:3em;
+}
+
+#pandora img.show {
+    opacity:0.45
+}
+
+#pandora img {
+    position:absolute;
+    top:0;
+    left:0;
+    min-height:100vh;
+    min-width:100vw;
+    height:auto;
+    width:auto;
+}
+
+#pandora img {
+    transition:opacity 0.8s;
+    opacity:0;
+}
+
+.response {
+    width:70%;
+    margin:auto;
+    overflow:hidden;
+}
+
+.response.hide {
+    display:none !important;
+}
+
+#response-mc div {
+    cursor:pointer;
+    display:block;
+    float:left;
+    width:40%;
+    margin: 15px 5%;
+    box-sizing:border-box;
+    text-align:center;
+    font-size:2em;
+    min-height:1.5em;
+    overflow:visible;
+    position:relative;
+    opacity:0.6;
+    transition:opacity 0.2s;
+}
+
+#response-mc div::after {
+    content:"";
+    display:block;
+    height:4px;
+    background-color:white;
+    width:0;
+    transition:width 0.2s;
+    position:absolute;
+    top:100%;
+    left:0;
+    border-radius:2px;
+}
+
+#response-mc div:hover {
+    opacity:1;
+}
+
+#response-mc div:hover::after {
+    width:100%;
+}
+
+#response-text input {
+    background-color:transparent;
+    border:5px solid white;
+    border-radius:10px;
+    padding:10px;
+    width:100%;
+    box-sizing:border-box;
+    font-family: "Quicksand",sans-serif;
+    font-size: 2em;
+    text-align: center;
+    height: 3em;
+    margin: auto;
+    display: block;
+    opacity:0.6;
+    color:white;
+    transition:opacity 0.3s;
+}
+
+#response-text input:focus {
+    opacity:1;
+    outline:none;
+}
+
+@media only screen and (max-width:700px) {
+    body {
+        font-size:0.8em;
+    }
+    #question {
+        margin:10vh auto;
+    }
+    #response-mc div {
+        width:90%;
+        margin:5px 5%;
+        min-height:1em;
+    }
+}
+ 
